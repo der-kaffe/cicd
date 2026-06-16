@@ -2,4 +2,9 @@
 __pycache__/
 *.pyc
 actions-runner/
-actions-runner/
+infra/terraform/id_ed25519_debian
+infra/terraform/id_ed25519_debian.pub
+infra/terraform/terraform.tfstate
+infra/terraform/terraform.tfstate.backup
+infra/terraform/.terraform/
+infra/terraform/.terraform.lock.hcl

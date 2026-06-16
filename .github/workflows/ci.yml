@@ -93,11 +93,11 @@ jobs:
           tags: |
             ${{ env.IMAGE_NAME }}:${{ github.sha }}
             ${{ env.IMAGE_NAME }}:latest
-
   deploy:
     name: Deploy
     runs-on: self-hosted
     needs: push
+
     if: github.ref == 'refs/heads/main' && github.event_name == 'push'
     steps:
       - name: Checkout code
@@ -105,5 +105,5 @@ jobs:
 
       - name: Run Ansible playbook
         run: |
-          cd ansible
+          cd infra/ansible
           ansible-playbook deploy.yml
